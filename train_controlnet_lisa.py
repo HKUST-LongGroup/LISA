@@ -1363,6 +1363,7 @@ def main(args):
                 "main_loss": main_loss.detach().item(),
                 "lr": lr_scheduler.get_last_lr()[0],
             }
+            progress_bar.set_postfix(**{"loss": logs["loss"]})
             if not args.if_baseline:
                 logs.update({
                     "aux_loss": aux_loss.detach().item(),
@@ -1370,7 +1371,7 @@ def main(args):
                     "aux_loss_ratio": (aux_loss / (aux_target_norm + 1e-8)).detach().item(),
                     "lambda": float(current_lambda),
                 })
-            progress_bar.set_postfix(**{"loss": logs["loss"], "aux": logs["aux_loss"]})
+                progress_bar.set_postfix(**{"loss": logs["loss"], "aux": logs["aux_loss"]})
             progress_bar.set_postfix(**logs)
             accelerator.log(logs, step=global_step)
 
