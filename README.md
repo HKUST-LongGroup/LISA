@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2603.12057">
+  <a href="https://arxiv.org/pdf/2606.27192">
     <img src="assets/logo_arxiv.svg" alt="Arxiv" width="125">
   </a>
 </p>
