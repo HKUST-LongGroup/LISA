@@ -39,7 +39,7 @@
 
 
 <h3 align="center">LISA can accelerate the
-training and bootstrap better controllbale generation results on perceptual quality and condition fidelity.</h3>
+training and bootstrap better controllable generation results on perceptual quality and condition fidelity.</h3>
 
 
 <!-- ## Abstract
