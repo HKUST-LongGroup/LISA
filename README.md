@@ -16,7 +16,7 @@
   </a>
 </p>
 
-<!-- <h4 align="center">Image Restoration</h4>
+<h4 align="center">Controllbale Image Generation</h4>
 
 <p align="center">
 <img src="assets/teaser1.png" style="width: 90%; height: auto;">
@@ -24,18 +24,22 @@
 
 
 
-<h4 align="center">Image Editing</h4>
+<h4 align="center">Compositional-condition Generation</h4>
 
 <p align="center">
 <img src="assets/teaser2.png" style="width: 90%; height: auto;">
 </p>
 
-<h4 align="center">Camera-controlled Video Generation</h4>
+<h4 align="center">Controllbale Video Generation</h4>
+<p align="center">
+  <img src="assets/case1.gif" width="900" /><br/>
   <img src="assets/case2.gif" width="900" /><br/>
-  <img src="assets/case.gif" width="900" /><br/>
+</p>
 
 
-<h3 align="center">Achieve various conditional visual generation guided by a coarse sample with 1 line of code.</h3> -->
+
+<h3 align="center">LISA can accelerate the
+training and bootstrap better controllbale generation results on perceptual quality and condition fidelity.</h3>
 
 
 <!-- ## Abstract
@@ -58,7 +62,7 @@ We propose a novel guided method by using the $h$-transform, a tool that can con
 
 <br>
 
-## 1. Environment preparation
+## 0. Environment preparation
 ```
 pip install -r requirements.txt
 ```
@@ -66,7 +70,7 @@ pip install -r requirements.txt
 
 <br>
 
-## 2. Training
+## 1. Training
 
 We take the pose-guided image generation task as the example, you can change the dataset name for other tasks.
 
@@ -99,7 +103,7 @@ accelerate launch --config_file "./config.yml" \
 <br>
 
 
-## 3. Inference and Evaluation
+## 2. Inference
 
 ```
 export CONTROLNET_DIR="model_out/realsinglehumanpose/checkpoint-10000/controlnet"
@@ -110,6 +114,17 @@ python inference.py \
  --dataset_name=$DATASET_NAME \
  --resolution=512 \
  --output_dir="${CONTROLNET_DIR}/outputs/${SPLIT}/" \
+```
+
+
+
+<br>
+
+
+## 3. Evaluation
+
+```
+export CONTROLNET_DIR="model_out/realsinglehumanpose/checkpoint-10000/controlnet"
 
 python ./eval_scripts/metrics_realpose.py \
  --dataset_split=$SPLIT \
@@ -120,7 +135,6 @@ python ./eval_scripts/metrics_realpose.py \
 
 
 <br>
-
 
 ## TODO 🛠️
 
@@ -137,4 +151,13 @@ python ./eval_scripts/metrics_realpose.py \
 
 ## BibTex
 ```
+@misc{wang2026lisalikelihoodscorealignment,
+      title={LISA: Likelihood Score Alignment for Visual-condition Controllable Generation}, 
+      author={Yanghao Wang and Hongxu Chen and Jiazhen Liu and Zhenqi He and Rui Liu and Zhen Wang and Long Chen},
+      year={2026},
+      eprint={2606.27192},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.27192}, 
+}
 ```
