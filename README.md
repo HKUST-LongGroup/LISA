@@ -138,9 +138,9 @@ python ./eval_scripts/metrics_realpose.py \
 
 ## TODO 🛠️
 
-- [x] Controllable Image Gneration using SD2.1 run code
-- [ ] Controllable Image Gneration using SD3 run code
-- [ ] Controllable Video Gneration using SVD run code
+- [x] Controllable Image Generation using SD2.1 run code
+- [ ] Controllable Image Generation using SD3 run code
+- [ ] Controllable Video Generation using SVD run code
 
 
 <br>
@@ -151,13 +151,10 @@ python ./eval_scripts/metrics_realpose.py \
 
 ## BibTex
 ```
-@misc{wang2026lisalikelihoodscorealignment,
-      title={LISA: Likelihood Score Alignment for Visual-condition Controllable Generation}, 
-      author={Yanghao Wang and Hongxu Chen and Jiazhen Liu and Zhenqi He and Rui Liu and Zhen Wang and Long Chen},
-      year={2026},
-      eprint={2606.27192},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2606.27192}, 
+@article{wang2026lisa,
+  title={LISA: Likelihood Score Alignment for Visual-condition Controllable Generation},
+  author={Wang, Yanghao and Chen, Hongxu and Liu, Jiazhen and He, Zhenqi and Liu, Rui and Wang, Zhen and Chen, Long},
+  journal={arXiv preprint arXiv:2606.27192},
+  year={2026}
 }
 ```
